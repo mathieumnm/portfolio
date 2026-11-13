@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact pagina van de portfolio van Mathieu Menten. Neem contact met me op.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - portfolio Mathieu Menten</title>
+
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#1A1A1A] text-[#D9D9D9]">
+
+    <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-green-800">Ga naar de inhoud</a>
+
+    <div class="max-w-6xl mx-auto px-4 py-4">
+
+        <header class="bg-[#1A1A1A] text-[#D9D9D9] border border-[#003D27] rounded-lg p-4 mb-4 flex flex-wrap items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center gap-3 text-2xl font-bold tracking-tight">
+                <img src="images/nieuw_logo.png" alt="logo" width="50" height="50" class="size-12 object-contain">
+                <span>Mijn Portfolio</span>
+            </a>
+
+            <input type="checkbox" id="menu-knop" class="peer sr-only">
+            <label for="menu-knop" class="cursor-pointer rounded-lg border border-gray-300 px-3 py-2 peer-focus-visible:outline-2 md:hidden">Menu</label>
+
+            <nav aria-label="Hoofdmenu" class="hidden w-full peer-checked:block md:block md:w-auto">
+                <ul class="flex flex-col md:flex-row md:gap-2">
+                    <li><a href="index.html" class="block px-3 py-2 rounded-lg text-white hover:bg-[#006039] hover:text-white">Home</a></li>
+                    <li><a href="portfolio.html" class="block px-3 py-2 rounded-lg text-white hover:bg-[#006039] hover:text-white">Portfolio</a></li>
+                    <li><a href="project.html" class="block px-3 py-2 rounded-lg text-white hover:bg-[#006039] hover:text-white">Projecten</a></li>
+                    <li><a href="contact.html" aria-current="page" class="block px-3 py-2 rounded-lg bg-[#006039] text-white font-semibold">Contact</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <main class="lg:col-span-2 bg-[#1A1A1A] border border-[#003D27] rounded-lg p-4" id="inhoud">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Contact opnemen</h1>
+                <p class="text-[#D9D9D9] mb-6">Heb je een vraag over mijn projecten? Stuur me gerust een bericht.</p>
+
+                <p class="mb-6 text-[#D9D9D9]">Velden met een <span class="font-semibold text-red-700">*</span> zijn verplicht.</p>
+
+                <form action="#" method="get" class="grid gap-4 md:grid-cols-2">
+                    
+                    <div>
+                        <label for="naam" class="block font-medium">Naam <span class="text-red-700" aria-hidden="true">*</span></label>
+
+                        <input type="text" id="naam" name="naam" autocomplete="name" required
+                            class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 text-gray-900">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block font-medium">
+                            E-mail <span class="text-red-700" aria-hidden="true">*</span>
+                        </label>
+
+                        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hulp"
+                            class="peer mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 user-invalid:border-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 text-gray-900">
+
+                        <p id="email-hulp" class="mt-1 text-sm text-[#D9D9D9]">Vul een e-mailadres in zoals naam@voorbeeld.com</p>
+
+                        <p class="mt-1 hidden text-sm font-semibold text-red-700 peer-user-invalid:block">Dit e-mailadres klopt niet. Vul het in zoals naam@voorbeeld.com</p>
+                    </div>
+
+                    <div>
+                        <label for="gsm" class="block font-medium">
+                            Gsm-nummer
+                        </label>
+
+                        <input type="tel" id="gsm" name="gsm" autocomplete="tel" pattern="04[0-9]{8}" title="Schrijf tien cijfers, beginnend met 04, zonder spaties." aria-describedby="gsm-hulp"
+                            class="peer mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 user-invalid:border-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 text-gray-900">
+
+                        <p id="gsm-hulp" class="mt-1 text-sm text-[#D9D9D9]">Niet verplicht. Tien cijfers zonder spaties, bijvoorbeeld 0412345678.</p>
+
+                        <p class="mt-1 hidden text-sm font-semibold text-red-700 peer-user-invalid:block">Dit nummer klopt niet. Schrijf het zonder spaties: 0412345678.</p>
+                    </div>
+
+                    <div>
+                        <label for="onderwerp" class="block font-medium">
+                            Onderwerp
+                        </label>
+
+                        <select id="onderwerp" name="onderwerp" class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 text-gray-900">
+                            <option value="">Maak een keuze</option>
+                            <option value="stage">Stage</option>
+                            <option value="project">Project</option>
+                            <option value="vraag">Een vraag</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="md:col-span-2 rounded-lg border border-gray-300 p-4">
+
+                        <legend class="px-2 font-semibold">
+                            Hoe wil je antwoord krijgen?
+                        </legend>
+
+                        <div class="mt-2 flex items-center gap-2">
+                            <input type="radio" id="via-mail" name="antwoord" value="mail" checked class="size-5 accent-green-700">
+                            <label for="via-mail">Per e-mail</label>
+                        </div>
+
+                        <div class="mt-2 flex items-center gap-2">
+                            <input type="radio" id="via-telefoon" name="antwoord" value="telefoon" class="size-5 accent-green-700">
+                            <label for="via-telefoon">Per telefoon</label>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="md:col-span-2">
+                        <label for="bericht" class="block font-medium">Je bericht <span class="text-red-700" aria-hidden="true">*</span> </label>
+
+                        <textarea id="bericht" name="bericht" rows="5" required minlength="10" aria-describedby="bericht-hulp"  class="peer mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 user-invalid:border-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 text-gray-900"></textarea>
+
+                        <p id="bericht-hulp" class="mt-1 text-sm text-[#D9D9D9]">Schrijf minstens tien tekens.</p>
+
+                        <p class="mt-1 hidden text-sm font-semibold text-red-700 peer-user-invalid:block">Dit bericht is te kort. schrijf minstens tien tekens.</p>
+                    </div>
+
+                    <div class="md:col-span-2 flex items-center gap-2">
+                        <input type="checkbox" id="privacy" name="privacy" value="ja" required class="size-5 accent-green-700">
+
+                        <label for="privacy">
+                            Ik geef toestemming om mijn gegevens te gebruiken om mijn vraag te beantwoorden.
+                        </label>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <button type="submit" class="rounded-lg bg-green-800 px-5 py-2 font-semibold text-white hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">Verstuur</button>
+                    </div>
+                </form>
+
+
+            </main>
+
+            <aside class="bg-[#1A1A1A] border border-[#003D27] rounded-lg p-4">
+
+                <h2 class="text-2xl font-bold mb-4">Mijn contactgegevens</h2>
+                <div class="flex flex-col gap-4 mb-6">
+                    <div>
+                        <h3 class="font-bold mb-1">E-mail</h3>
+                        <a href="mailto:mathieu.menten@student.ap.be" class="text-green-800 underline hover:text-green-900 break-all">mathieu.menten@student.ap.be
+                        </a>
+                    </div>
+
+                </div>
+
+                <h2 class="text-xl font-bold mb-3">sociale media</h2>
+
+                <ul class="flex flex-wrap gap-3">
+                    <li>
+                        <a href="https://github.com/"
+                           class="text-green-800 underline hover:text-green-900">GitHub</a>
+                    </li>
+                </ul>
+
+            </aside>
+
+        </div>
+
+        <footer class="bg-[#1A1A1A] text-[#D9D9D9] border border-[#003D27] rounded-lg p-4 mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+
+            <p>&copy; 2026 Mijn Portfolio</p>
+
+            <a href="mailto:mathieu.menten@student.ap.be" class="text-green-800 underline hover:text-green-900">Contact via e-mail</a>
+        </footer>
+
+    </div>
+
+</body>
+</html>
